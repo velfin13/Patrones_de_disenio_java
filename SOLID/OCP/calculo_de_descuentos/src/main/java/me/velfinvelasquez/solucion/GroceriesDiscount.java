@@ -1,4 +1,10 @@
 package me.velfinvelasquez.solucion;
 
-public class GroceriesDiscount {
+import me.velfinvelasquez.models.Product;
+
+public class GroceriesDiscount extends DiscountPolicy {
+    @Override
+    public double calculateDiscount(Product product) {
+        return product.getPrice() * 0.05;  // 5% de descuento
+    }
 }
